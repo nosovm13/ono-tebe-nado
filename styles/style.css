@@ -350,3 +350,63 @@
   font-size: 20px;
   line-height: 24px;               /* 120% */
 }
+
+.footer {
+  display: grid;
+  grid-template-columns: 240px 1fr 240px;
+  align-items: start;
+
+  padding: 0;              /* если content-section уже даёт паддинги — оставь */
+  margin-top: 180px;       
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 180px;       /* как в Figma */
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__address a {
+  display: block;
+}
+
+.address__text {
+  margin: 0;
+}
+
+.footer__menu {
+  justify-self: center;
+  text-align: center;
+}
+
+.footer__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__menu-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer__menu-link.under {
+  text-decoration: underline;
+}
+
+.footer__social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  justify-self: end;
+  display: flex;
+  gap: 48px; /* подгони как в фигме */
+}
+
+.footer__social-icon {
+  width: 48px;   /* подгони */
+  height: 48px;
+  display: block;
+}
