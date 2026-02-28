@@ -25,7 +25,7 @@
     /*column-gap: 40px;  Расстояние между 3 колонками в шапке */
 
 
-    margin-bottom: 96px; 
+    margin-bottom: 101px; 
 
     padding: 92px 50px 0 50px;
 
@@ -308,9 +308,9 @@ color: #000;
 
 .about { /* Секция «Об аукционе»: grid определяет расстояние между кружком и текстом */
 margin-top: 120px; /* Отступ от «Лоты» */
+padding-left: 24px;
 display: grid;
 grid-template-columns: 334px 693px; /* Ширины колонок */
-column-gap: 25px; /* Зазор между колонками */
 align-items: start;
 }
 
