@@ -371,7 +371,7 @@ line-height: 24px;
   align-items: start;
   margin-top: 180px; /* Отступ сверху у футера */
   min-height: 180px; /* Минимальная высота футера */
-  padding: 0;
+  padding: 0 50px 0 50px;
 }
 
 .footer__address {
