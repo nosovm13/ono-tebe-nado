@@ -1,12 +1,13 @@
-.page {
-    min-width: 1100px;   /* если так требует заготовка */
-      max-width: 1100px;   /* ширина макета */
-     margin: 0 auto;      /* центрирование всей страницы */
-}
+/*.page {
+    min-width: 1100px;   
+      max-width: 1100px;  
+     margin: 0 auto;      
+}*/
 
-/* ВАЖНО: поставь ширину контента как в Figma (W у Frame или у контентной области) */
+
 .content-section {
     max-width: 1100px;   /* <-- поменяешь на значение из Figma */
+    max-height: 757px;
     margin: 0 auto;
     padding: 0 24px;     /* чтобы на узких экранах не прилипало к краям */
 }
@@ -19,12 +20,15 @@
     column-gap: 40px;
 
     padding-top: 40px;   /* подгонишь под макет */
+    margin-top: 92px;
+    margin-bottom: 96px;
   
 }
 
 .header__menu {
     justify-self: start;
     align-self: center;
+    margin-left: 26px;
 }
 
 .header__links-list {
@@ -58,17 +62,24 @@
      width: 148px;
     height: 105px;
     display: block;
-    padding-left: 36;
 }
 
 .header__address { 
+    width: 240px;
+    height: 98px;
     font-size: 18px;
     line-height: 24.3px;
     justify-self: end;
     align-self: center;
-    text-align: right;
+    text-align: left;
     font-style: normal; 
-    margin: 0;
+    margin-left: 10px;
+    margin-right: 26px;
+}
+
+.header__address p {
+  margin: 0;
+  display: block;
 }
 
 .header__address a {
@@ -94,4 +105,88 @@
 
 .header a.under {
   text-decoration: underline;
+}
+
+.cover {
+  position: relative;
+  background-image: url("../images/cover.jpg");
+  background-size: cover;
+  background-position: center;
+
+  padding: 165px 50px 50px 50px; /* подгонишь под макет */
+}
+
+.cover__title {
+  margin: 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.cover__description {
+  margin-top: 106px; /* подгонишь */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+  width: 1000px;
+
+  color: #fff;
+}
+
+.cover__description-text {
+    
+  margin: 0;
+
+word-spacing: 10px;
+  text-transform: uppercase;
+  line-height: 28px;
+  font-size: 22px;
+}
+
+/* переиспользуемый оверлей — потом пригодится и для карточек */
+.cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* подгонишь под Figma */
+}
+
+.cover > * {
+  position: relative; /* чтобы текст был поверх overlay */
+}
+
+.cover__title {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+
+  font-size: 100px;       /* подгонишь */
+  line-height: 1.15;      /* подгонишь */
+  letter-spacing: 0.3em;
+}
+
+.cover__title-part {
+  display: block;
+}
+
+.cover__title-part_left {
+  text-align: left;
+}
+
+.cover__title-part_center {
+  text-align: center;
+}
+
+.cover__title-part_right {
+  text-align: right;
+}
+
+.cover__button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 32px;  /* подгонишь */
+  text-transform: uppercase;
+  cursor: pointer;
 }
