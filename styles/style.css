@@ -356,7 +356,7 @@ gap: 30px;
 .about__text-column { /* Правая колонка: ВАЖНО для вертикального совпадения */
     width: 693px;
     padding-top: 133px; /* Двигает ВЕСЬ правый блок вниз (если «Об аукционе» ниже эталона — править здесь) */
-    padding-left: 37px;
+    padding-left: 30px;
 }
 
 .about__paragraph {
