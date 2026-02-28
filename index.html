@@ -11,7 +11,9 @@
   </head>
   <body class="page">
 
+    <!-- ШАПКА: расположение задаётся в .header + общий контейнер .content-section -->
     <header class="header content-section">
+        <!-- ЛЕВОЕ МЕНЮ: положение в шапке задают .header__menu (align-self, margin-left) и .header (grid) -->
         <nav class="header__menu">
           <ul class="header__links-list">
             <li class="header__links-list-item">
@@ -26,6 +28,7 @@
           </ul>
         </nav>
 
+        <!-- ЛОГО: центрирование задаётся .header (grid-template-columns) и размер блока .header__logo (width/height) -->
         <a class="header__logo" href="#" aria-label="На главную">
           <img
             class="header__logo-image"
@@ -34,6 +37,7 @@
           />
         </a>
 
+        <!-- АДРЕС: положение/переносы строк зависят от .header__address (width, line-height, align-self, margin-right) -->
         <address class="header__address">
           <a class="under" href="tel:+99995555555">+9 999 555 5555</a>
           <a class="under" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
@@ -42,13 +46,19 @@
       </header>
 
       <main>
+        <!-- ОБЛОЖКА: всё «движение» по вертикали/горизонтали задаёт .cover (padding, min-height) -->
         <section class="cover content-section">
+          <!-- ЗАГОЛОВОК: ширина слов и их сдвиг зависят от .cover__title (letter-spacing, line-height) и выравниваний *_left/center/right -->
           <h1 class="cover__title">
+            <!-- Строка 1: выравнивание задаёт .cover__title-part_left -->
             <span class="cover__title-part cover__title-part_left">оно</span>
+            <!-- Строка 2: выравнивание задаёт .cover__title-part_center -->
             <span class="cover__title-part cover__title-part_center">тебе</span>
+            <!-- Строка 3: выравнивание задаёт .cover__title-part_right -->
             <span class="cover__title-part cover__title-part_right">надо</span>
           </h1>
 
+          <!-- Нижняя строка обложки: положение по высоте зависит от margin-top:auto у .cover__description и padding-bottom у .cover -->
           <div class="cover__description">
             <p class="cover__description-text">Аукцион вещей, в которые никто не верил</p>
             <button class="cover__button" type="button">Сделать ставку</button>
@@ -56,8 +66,10 @@
         </section>
 
 
+        <!-- ЛОТЫ: отступ секции сверху задаёт .lots (margin-top). Сетка карточек — .lots__card-list (gap) и .lots__card-list-item (width) -->
         <section class="lots content-section" id="lots">
 
+          <!-- Заголовок «Лоты»: сдвиг/отступы задаёт .lots__heading (margin-left / margin-bottom) -->
           <h2 class="lots__heading">Лоты</h2>
 
             <ul class="lots__card-list">
@@ -107,6 +119,7 @@
         </section>
         
         
+        <!-- ОБ АУКЦИОНЕ: положение правого текста чаще всего «уплывает» из-за .about__text-column (padding-top) и .about__text (margin-top) -->
         <section class="about content-section" id="about">
           <div class="about__logo-column">
             <div class="about__logo">
@@ -134,6 +147,7 @@
       </main>
 
 
+      <!-- ФУТЕР: сетка и горизонтальные позиции задаёт .footer (grid-template-columns) + .content-section (padding) -->
       <footer class="footer content-section">
         <address class="address footer__address">
           <a class="under" href="tel:+99995555555">+9 999 555 5555</a>

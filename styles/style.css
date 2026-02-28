@@ -1,42 +1,48 @@
+/*
+  Файл style.css — здесь правим РАСПОЛОЖЕНИЕ элементов.
+  По твоему сравнению: слева эталон, по центру твоя вёрстка.
+  Я НЕ меняю значения, только отмечаю, какие свойства двигают элементы,
+  чтобы ты мог(ла) подставлять цифры из Figma.
+*/
+
 /*.page {
     min-width: 1100px;   
     max-width: 1100px;  
     margin: 0 auto;      
 }*/
 
-
-.content-section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 24px;
+.content-section { /* Контейнер 1100px: влияет на общую ширину и боковые поля всех секций с этим классом */
+    max-width: 1100px; /* Ширина макета (если весь контент уже/шире эталона — менять здесь) */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+    /*padding: 0 24px;  Боковые внутренние отступы (если всё «прилипло» к краям или, наоборот, слишком далеко — менять здесь) */
 }
 
-.header {
+.header { /* Шапка: grid + отступы. Если меню/лого/адрес не на местах — сначала смотри сюда */
     display: grid;
     
-    grid-template-columns: 1fr auto 1fr;
-    align-items: start;
-    column-gap: 40px;
+    grid-template-columns: 1fr auto 1fr; /* 3 колонки: меню | лого | адрес. Влияет на центрирование логотипа и ширину боковых блоков */
+    align-items: start; /* Вертикальное выравнивание содержимого в ячейках grid (если меню/адрес выше/ниже эталона — менять здесь или align-self ниже) */
+    column-gap: 40px; /* Расстояние между 3 колонками в шапке */
 
-    padding-top: 40px;
-    margin-top: 92px;
-    margin-bottom: 96px;
+    margin-top: 92px; /* ВНЕШНИЙ отступ сверху у шапки (двигает всю шапку относительно страницы) */
+    margin-bottom: 96px; /* ВНЕШНИЙ отступ снизу у шапки (влияет на расстояние до обложки) */
+    margin-left: 50px;
 
 }
 
-.header__menu {
-    justify-self: start;
-    align-self: center;
-    margin-left: 26px;
+.header__menu { /* Левый блок шапки (меню): позиция в grid */
+    justify-self: start; /* Прижимает меню к левому краю своей колонки */
+    align-self: center; /* Поднимает/опускает блок относительно соседей (частая причина несовпадения по вертикали) */
+    /*margin-left: 26px;  Доп. сдвиг меню/блока вправо (если в эталоне левее/правее) */
 }
 
-.header__links-list {
+.header__links-list { /* Горизонтальный список ссылок */
     list-style: none;
     margin: 0;
     padding: 0;
 
     display: flex;
-    gap: 13px;
+    gap: 13px; /* Расстояние между пунктами (влияет на общую длину меню) */
 }
 
 .header__links-list-item {
@@ -44,35 +50,35 @@
     align-items: center;
 }
 
-.header__links-list-item:not(:first-child)::before {
+.header__links-list-item:not(:first-child)::before { /* Кружок-разделитель между пунктами меню */
     content: "";
     width: 6px;
     height: 6px;
     border-radius: 50%;
     border: 1px solid #000;
     background: transparent;
-    margin-right: 10px;
+    margin-right: 10px; /* Отступ кружка от текста (если кружок «слипся»/далеко — править здесь) */
 }
 
-.header__logo {
+.header__logo { /* Логотип: размер блока влияет на высоту шапки и центрирование */
     justify-self: center;
     align-self: center;
-    width: 148px;
-    height: 105px;
+    width: 148px; /* Ширина логотипа/элемента (если выглядит больше/меньше эталона) */
+    height: 105px; /* Высота логотипа/элемента (влияет на вертикальное выравнивание) */
     display: block;
 }
 
-.header__address {
-    width: 240px;
-    height: 98px;
+.header__address { /* Правый блок шапки (адрес): размеры и отступы двигают текст */
+    width: 240px; /* Ширина адресного блока (влияет на переносы строк) */
+    height: 98px; /* Высота блока (может влиять на выравнивание в grid при align-self) */
     font-size: 18px;
-    line-height: 24.3px;
-    justify-self: end;
-    align-self: center;
+    line-height: 24.3px; /* Межстрочный интервал в адресе (если строки «слиплись»/разъехались) */
+    justify-self: end; /* Прижимает адрес к правому краю своей колонки */
+    align-self: center; /* Поднимает/опускает адрес относительно логотипа (если не совпадает по вертикали — править здесь) */
     text-align: left;
     font-style: normal;
-    margin-left: 10px;
-    margin-right: 26px;
+    margin-left: 10px; /* Доп. сдвиг адреса вправо/влево (если текст адреса не на месте) */
+    margin-right: 50px; /* Сдвиг блока влево/вправо (если правый блок не совпадает с эталоном) */
 }
 
 .header__address p {
@@ -105,37 +111,37 @@ display: block;
 text-decoration: underline;
 }
 
-.cover {
+.cover { /* ОБЛОЖКА: тут задаётся высота/внутренние отступы/позиция заголовка и нижней строки */
 position: relative;
 background-image: url("../images/cover.jpg");
 background-size: cover;
 background-position: center;
 
-padding: 165px 50px 50px 50px;
-min-height: 757px;      /* в этом проекте обычно так в эталоне */
+padding: 165px 50px 50px 50px; /* top=165 (заголовок ниже/выше), left/right=50 (ближе/дальше от краёв), bottom=50 (нижняя строка и кнопка) */
+min-height: 757px;      /* в этом проекте обычно так в эталоне */ /* Высота секции: если фон/секция выше/ниже эталона — менять тут */
 display: flex;
 flex-direction: column;
 
 }
 
 
-.cover__description {
-margin-top: auto;
+.cover__description { /* Нижняя строка обложки: текст + кнопка */
+margin-top: auto; /* Прижимает блок к низу (если выше/ниже — смотри padding-bottom у .cover) */
 display: flex;
-justify-content: space-between;
+justify-content: space-between; /* Разводит текст и кнопку по краям */
 align-items: center;
 gap: 20px;
 
 color: #fff;
 }
 
-.cover__description-text {
+.cover__description-text { /* Текст «Аукцион…»: интервалы влияют на длину строки/возможный перенос */
     
 font-size: 22px;
 line-height: 28px;
 text-transform: uppercase;
 letter-spacing: 0.0em;
-word-spacing: 0.6em;
+word-spacing: 0.6em; /* Пробелы между словами (если в эталоне иначе) */
 }
 
 .cover::before {
@@ -149,47 +155,47 @@ background: rgba(0, 0, 0, 0.6);
 position: relative;
 }
 
-.cover__title {
+.cover__title { /* Заголовок (ОНО/ТЕБЕ/НАДО): размер/межстрочный/межбуквенный интервалы двигают слова */
 margin: 0;
 color: #fff;
 text-transform: uppercase;
 
-font-size: 100px;
-line-height: 1.15;
-letter-spacing: 0.3em;
+font-size: 100px; /* Размер букв (если крупнее/мельче эталона) */
+line-height: 1.15; /* Межстрочный интервал между строками заголовка */
+letter-spacing: 0.3em; /* Межбуквенный интервал: влияет на ширину слов и их совпадение с эталоном */
 }
 
 .cover__title-part {
 display: block;
 }
 
-.cover__title-part_left {
+.cover__title-part_left { /* Выравнивание строки «ОНО» */
 text-align: left;
 }
 
-.cover__title-part_center {
+.cover__title-part_center { /* Выравнивание строки «ТЕБЕ» */
 text-align: center;
 }
 
-.cover__title-part_right {
+.cover__title-part_right { /* Выравнивание строки «НАДО» */
 text-align: right;
 }
 
-.cover__button {
+.cover__button { /* Кнопка: размеры задаются padding и border */
 background: transparent;
 color: #fff;
 border: 1px solid #fff;
-padding: 12px 32px;
+padding: 12px 32px; /* Размер кнопки */
 text-transform: uppercase;
 cursor: pointer;
 }
 
-.lots {
-margin: 180px auto 0;
+.lots { /* Секция «Лоты»: отступ сверху задаёт дистанцию от обложки */
+margin: 180px auto 0; /* top-margin секции «Лоты» */
 }
 
-.lots__heading {
-margin: 0 0 27px 26px;
+.lots__heading { /* Заголовок «Лоты» */
+margin: 0 0 27px 26px; /* bottom=27 — расстояние до карточек; left=26 — сдвиг вправо */
 padding-top: 0;
 
 font-weight: 700;
@@ -199,18 +205,18 @@ text-transform: uppercase;
 }
 
 
-.lots__card-list {
+.lots__card-list { /* Список карточек: flex + gap определяют сетку */
 list-style: none;
 margin: 0;
 padding: 0;
 
 display: flex;
-gap: 25px;
+gap: 25px; /* Расстояние между карточками */
 flex-wrap: wrap;
 }
 
-.lots__card-list-item {
-width: 334px;
+.lots__card-list-item { /* Ширина колонки карточки */
+width: 334px; /* Ширина каждой карточки */
 }
 
 .card-link {
@@ -220,11 +226,11 @@ text-decoration: none;
 color: inherit;
 }
 
-.card {
+.card { /* Карточка: высота и padding влияют на «длину» блока и положение текста */
 position: relative;
-height: 596px; 
+height: 596px;  /* Фикс. высота карточки */
 min-height: 0;
-padding: 48px 40px 48px;
+padding: 48px 40px 48px; /* Внутренние отступы внутри карточки */
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -257,7 +263,7 @@ background-image: url("../images/card-lot-02.jpg");
 background-image: url("../images/card-lot-03.jpg");
 }
 
-.card__title {
+.card__title { /* Заголовок карточки */
 margin: 0;
 font-weight: 700;
 font-size: 22px;
@@ -266,16 +272,16 @@ text-transform: uppercase;
 text-decoration: underline;
 }
 
-.card__text {
+.card__text { /* Текст карточки */
 margin: 0;
 font-size: 20px;
 font-weight: 400;
 line-height: 1.2;
 }
 
-.lots__look-more-link {
+.lots__look-more-link { /* Ссылка «посмотреть больше» */
 display: inline-block;
-margin-top: 30px;
+margin-top: 30px; /* Отступ сверху у ссылки */
 margin-left: 26px;
 text-decoration: underline;
 font-size: 20px;
@@ -283,11 +289,11 @@ line-height: 23px;
 color: #000;
 }
 
-.about {
-margin-top: 120px;
+.about { /* Секция «Об аукционе»: grid определяет расстояние между кружком и текстом */
+margin-top: 120px; /* Отступ от «Лоты» */
 display: grid;
-grid-template-columns: 334px 693px;
-column-gap: 25px;
+grid-template-columns: 334px 693px; /* Ширины колонок */
+column-gap: 25px; /* Зазор между колонками */
 align-items: start;
 }
 
@@ -322,16 +328,16 @@ line-height: 47px;
 text-transform: uppercase;
 }
 
-.about__text {
-margin-top: 150px;
+.about__text { /* Блок абзацев */
+margin-top: 150px; /* Расстояние от заголовка до абзацев */
 display: flex;
 flex-direction: column;
 gap: 30px;
 }
 
-.about__text-column {
+.about__text-column { /* Правая колонка: ВАЖНО для вертикального совпадения */
     width: 693px;
-    padding-top: 133px;
+    padding-top: 133px; /* Двигает ВЕСЬ правый блок вниз (если «Об аукционе» ниже эталона — править здесь) */
 }
 
 .about__paragraph {
@@ -340,12 +346,12 @@ font-size: 20px;
 line-height: 24px;
 }
 
-.footer {
+.footer { /* Подвал: grid и margin-top двигают весь футер */
     display: grid;
-  grid-template-columns: 240px 1fr 240px;
+  grid-template-columns: 240px 1fr 240px; /* 3 колонки футера */
   align-items: start;
-  margin-top: 180px;
-  min-height: 180px;
+  margin-top: 180px; /* Отступ сверху у футера */
+  min-height: 180px; /* Минимальная высота футера */
   padding: 0;
 }
 
@@ -381,14 +387,14 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-.footer__social-list {
+.footer__social-list { /* Иконки справа: flex + gap определяют расстояния */
 list-style: none;
 margin: 0;
 padding: 0;
 
 justify-self: end;
 display: flex;
-gap: 48px;
+gap: 48px; /* Расстояние между иконками */
 }
 
 .footer__social-icon {
