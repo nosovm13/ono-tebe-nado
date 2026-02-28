@@ -64,9 +64,10 @@
 .header__logo { /* Логотип: размер блока влияет на высоту шапки и центрирование */
     justify-self: left;
     align-self: center;
+    margin-bottom: 0px;
     margin-left: 37px;
-    width: 148px; /* Ширина логотипа/элемента (если выглядит больше/меньше эталона) */
-    height: 105px; /* Высота логотипа/элемента (влияет на вертикальное выравнивание) */
+    width: 138px; /* Ширина логотипа/элемента (если выглядит больше/меньше эталона) */
+    max-height: 100px; /* Высота логотипа/элемента (влияет на вертикальное выравнивание) */
     margin-right: 184px ;
     display: block;
 }
@@ -206,6 +207,8 @@ cursor: pointer;
 
 .lots { /* Секция «Лоты»: отступ сверху задаёт дистанцию от обложки */
 margin: 180px auto 0; /* top-margin секции «Лоты» */
+
+padding-left: 24px;
 }
 
 .lots__heading { /* Заголовок «Лоты» */
@@ -222,7 +225,7 @@ text-transform: uppercase;
 .lots__card-list { /* Список карточек: flex + gap определяют сетку */
 list-style: none;
 margin: 0;
-padding: 0;
+padding-left: 0;
 
 display: flex;
 gap: 25px; /* Расстояние между карточками */
