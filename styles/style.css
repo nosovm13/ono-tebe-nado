@@ -292,3 +292,61 @@
   line-height: 23px;
   color: #000;
 }
+
+.about {
+  margin-top: 120px;              /* подгони по макету */
+  display: grid;
+  grid-template-columns: 334px 693px;
+  column-gap: 25px;
+  align-items: start;
+}
+
+.about__logo {
+  width: 240px;                   /* диаметр круга (если в Figma другой — поменяешь) */
+  height: 240px;
+  border-radius: 50%;
+  background: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* важно, потому что в global.css img { width: 100% } */
+.about__logo-image {
+  width: 148px;                   /* подгони, если надо */
+  height: auto;
+}
+
+.about__logo-column { 
+  padding: 0;                 /* важно */
+  display: flex;
+  justify-content: center;     /* круг по центру колонки */
+  align-items: flex-start;
+} /* подгони */
+
+.about__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+}
+
+.about__text {
+  margin-top: 150px;              /* подгони по Figma */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__text-column {
+     width: 693px; /* правая колонка */
+    padding-top: 133px; 
+}
+
+.about__paragraph {
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;               /* 120% */
+}
