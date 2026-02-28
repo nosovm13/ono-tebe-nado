@@ -1,73 +1,97 @@
-.header{
-    color: #000000;
+.page {
+    min-width: 1100px;   /* если так требует заготовка */
+      max-width: 1100px;   /* ширина макета */
+     margin: 0 auto;      /* центрирование всей страницы */
+}
+
+/* ВАЖНО: поставь ширину контента как в Figma (W у Frame или у контентной области) */
+.content-section {
+    max-width: 1100px;   /* <-- поменяешь на значение из Figma */
+    margin: 0 auto;
+    padding: 0 24px;     /* чтобы на узких экранах не прилипало к краям */
+}
+
+.header {
     display: grid;
+    
     grid-template-columns: 1fr auto 1fr;
-    align-items: center;
+    align-items: start;
     column-gap: 40px;
-}
 
-.header__menu{
-    justify-self: start;
-}
-
-.header__links-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  gap: 13px; 
-}
-
-.header__links-list-item {
-  display: flex;
-  align-items: center;
-}
-
-.header__links-list-item:not(:first-child)::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-
-  border: 1px solid #000;   /* обводка */
-  background: transparent;  /* внутри пусто */
-
-  margin-right: 10px;
-}
-
-.header__logo{
-    justify-self: center;
-    width: 148px;
-    height: 105px;
-      display: block;  
-}
-
-.header__logo-image{
-    width: 100%;    
-    height: auto;    
-    display: block;    
-}
-
-.header__address{
-  justify-self: end;   
-  text-align: right;
+    padding-top: 40px;   /* подгонишь под макет */
   
 }
 
+.header__menu {
+    justify-self: start;
+    align-self: center;
+}
+
+.header__links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 13px;
+}
+
+.header__links-list-item {
+    display: flex;
+    align-items: center;
+}
+
+/* “дырявая” точка перед 2 и 3 пунктом */
+.header__links-list-item:not(:first-child)::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    background: transparent;
+    margin-right: 10px;
+}
+
+.header__logo {
+    justify-self: center;
+    align-self: center;
+     width: 148px;
+    height: 105px;
+    display: block;
+    padding-left: 36;
+}
+
+.header__address { 
+    font-size: 18px;
+    line-height: 24.3px;
+    justify-self: end;
+    align-self: center;
+    text-align: right;
+    font-style: normal; 
+    margin: 0;
+}
+
+.header__address a {
+    display: block; /* телефон и почта в столбик */
+}
+
+.header__address-text {
+    margin: 0;
+}
 
 .header a {
-  color: #000;
-  text-decoration: none;
+    color: #000;
+    text-decoration: none;
 }
 
 .header a:visited {
-  color: #000;
-}
-.header a:hover {
-  color: #000;
+    color: #000;
 }
 
-.under{
-    text-decoration:underline
+.header a:hover {
+    color: #000;
+}
+
+.header a.under {
+  text-decoration: underline;
 }
