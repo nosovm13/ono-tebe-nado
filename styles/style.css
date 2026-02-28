@@ -81,7 +81,7 @@
     text-align: left;
     font-style: normal;
     float: right;
-    margin-right: 40px; /* Сдвиг блока влево/вправо (если правый блок не совпадает с эталоном) */
+    margin-right: 35px; /* Сдвиг блока влево/вправо (если правый блок не совпадает с эталоном) */
     padding-left: 30px;
 }
 
@@ -146,7 +146,7 @@ font-size: 22px;
 line-height: 28px;
 text-transform: uppercase;
 letter-spacing: 0.0em;
-word-spacing: 0.6em; /* Пробелы между словами (если в эталоне иначе) */
+word-spacing: 0.87em; /* Пробелы между словами (если в эталоне иначе) */
 }
 
 .cover::before {
@@ -176,22 +176,30 @@ display: block;
 
 .cover__title-part_left { /* Выравнивание строки «ОНО» */
 text-align: left;
+align-self: center;
+
 }
 
 .cover__title-part_center { /* Выравнивание строки «ТЕБЕ» */
 text-align: left;
+align-self: center;
+margin-top: 20px;
 padding-left: 330px;
 }
 
 .cover__title-part_right { /* Выравнивание строки «НАДО» */
 text-align: right;
+align-self: center;
+margin-top: 18px;
+width: 1032px;
 }
 
 .cover__button { /* Кнопка: размеры задаются padding и border */
 background: transparent;
+font-size: 22px;
 color: #fff;
 border: 1px solid #fff;
-padding: 12px 32px; /* Размер кнопки */
+padding: 12px 32px 11px 31px; /* Размер кнопки */
 text-transform: uppercase;
 cursor: pointer;
 }
