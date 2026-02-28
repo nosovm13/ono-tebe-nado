@@ -7,7 +7,6 @@
 
 .content-section {
     max-width: 1100px;   /* <-- поменяешь на значение из Figma */
-    max-height: 757px;
     margin: 0 auto;
     padding: 0 24px;     /* чтобы на узких экранах не прилипало к краям */
 }
@@ -64,6 +63,8 @@
     display: block;
 }
 
+
+
 .header__address { 
     width: 240px;
     height: 98px;
@@ -114,6 +115,8 @@
   background-position: center;
 
   padding: 165px 50px 50px 50px; /* подгонишь под макет */
+
+  
 }
 
 .cover__title {
@@ -128,20 +131,17 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  height: 50px;
-  width: 1000px;
 
   color: #fff;
 }
 
 .cover__description-text {
     
-  margin: 0;
-
-word-spacing: 10px;
-  text-transform: uppercase;
-  line-height: 28px;
   font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 0.0em;
+  word-spacing: 0.6em; 
 }
 
 /* переиспользуемый оверлей — потом пригодится и для карточек */
@@ -189,4 +189,106 @@ word-spacing: 10px;
   padding: 12px 32px;  /* подгонишь */
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.lots {
+  margin: 180px 24px 0px 24px; /* подгонишь по макету */
+}
+
+.lots__heading {
+  margin: 0 0 27px 40px;
+  padding-top: 0;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+}
+
+
+.lots__card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  gap: 25px;           
+  flex-wrap: wrap;
+}
+
+.lots__card-list-item {
+  width: 334px;         /* ключевое: 3 карточки в ряд */
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  position: relative;
+  min-height: 596px;        /* подгонишь (в фигме карточки высокие) */
+  padding: 48px 40px 48px;  /* подгонишь */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* общий оверлей для карточек (чтобы текст читался) */
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.overlay > * {
+  position: relative;
+}
+
+/* картинки */
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
+
+/* текст в карточке */
+.card__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* ссылка "посмотреть больше" */
+.lots__look-more-link {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 40px;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000;
 }
