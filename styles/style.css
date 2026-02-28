@@ -375,7 +375,9 @@ line-height: 24px;
 }
 
 .footer__address {
-font-style: normal;
+  font-size: 18px;
+  line-height: 24.3px; /* Межстрочный интервал в адресе (если строки «слиплись»/разъехались) */
+  font-style: normal;
 }
 
 .footer__address a {
@@ -392,9 +394,11 @@ text-align: center;
 }
 
 .footer__menu-list {
-list-style: none;
-margin: 0;
-padding: 0;
+  font-size: 18px;
+  line-height: 24.3px; /* Межстрочный интервал в адресе (если строки «слиплись»/разъехались) */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__menu-link {
