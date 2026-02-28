@@ -212,7 +212,7 @@ padding-left: 24px;
 }
 
 .lots__heading { /* Заголовок «Лоты» */
-margin: 0 0 27px 26px; /* bottom=27 — расстояние до карточек; left=26 — сдвиг вправо */
+margin: 0 0 27px 40px; /* bottom=27 — расстояние до карточек; left=26 — сдвиг вправо */
 padding-top: 0;
 
 font-weight: 700;
@@ -299,7 +299,7 @@ line-height: 1.2;
 .lots__look-more-link { /* Ссылка «посмотреть больше» */
 display: inline-block;
 margin-top: 30px; /* Отступ сверху у ссылки */
-margin-left: 26px;
+margin-left: 40px;
 text-decoration: underline;
 font-size: 20px;
 line-height: 23px;
