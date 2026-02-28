@@ -62,7 +62,7 @@
     display: block;
 }
 
-.header__address { 
+.header__address {
     width: 240px;
     height: 98px;
     font-size: 18px;
@@ -70,7 +70,7 @@
     justify-self: end;
     align-self: center;
     text-align: left;
-    font-style: normal; 
+    font-style: normal;
     margin-left: 10px;
     margin-right: 26px;
 }
@@ -116,11 +116,6 @@ padding: 165px 50px 50px 50px;
 
 }
 
-.cover__title {
-margin: 0;
-text-transform: uppercase;
-color: #fff;
-}
 
 .cover__description {
 margin-top: 106px;
@@ -138,7 +133,7 @@ font-size: 22px;
 line-height: 28px;
 text-transform: uppercase;
 letter-spacing: 0.0em;
-word-spacing: 0.6em; 
+word-spacing: 0.6em;
 }
 
 .cover::before {
@@ -208,7 +203,7 @@ margin: 0;
 padding: 0;
 
 display: flex;
-gap: 25px;           
+gap: 25px;
 flex-wrap: wrap;
 }
 
@@ -333,7 +328,7 @@ gap: 24px;
 
 .about__text-column {
     width: 693px;
-    padding-top: 133px; 
+    padding-top: 133px;
 }
 
 .about__paragraph {
