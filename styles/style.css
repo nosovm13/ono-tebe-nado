@@ -60,6 +60,21 @@
     display: block;
 }
 
+/* Общие стили для address в header и footer */
+.address {
+  font-size: 18px;
+  line-height: 24.3px;
+  font-style: normal;
+}
+
+.address a {
+  display: block;
+}
+
+.address__text {
+  margin: 0;
+}
+
 .header__address { /* Правый блок шапки (адрес): размеры и отступы двигают текст */
     width: 240px; /* Ширина адресного блока (влияет на переносы строк) */
     height: 98px; /* Высота блока (может влиять на выравнивание в grid при align-self) */
@@ -68,10 +83,6 @@
     justify-self: end; /* Прижимает адрес к правому краю своей колонки */
     align-self: center; /* Поднимает/опускает адрес относительно логотипа (если не совпадает по вертикали — править здесь) */
     text-align: left;
-    font-style: normal;
-    float: right;
-    margin-right: 35px; /* Сдвиг блока влево/вправо (если правый блок не совпадает с эталоном) */
-    padding-left: 30px;
 }
 
 
@@ -138,12 +149,7 @@ letter-spacing: 0.0em;
 word-spacing: 0.87em; /* Пробелы между словами (если в эталоне иначе) */
 }
 
-.cover::before {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(0, 0, 0, 0.6);
-}
+
 
 .cover > * {
 position: relative;
