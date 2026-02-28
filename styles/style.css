@@ -112,13 +112,15 @@ background-size: cover;
 background-position: center;
 
 padding: 165px 50px 50px 50px;
-
+min-height: 757px;      /* в этом проекте обычно так в эталоне */
+display: flex;
+flex-direction: column;
 
 }
 
 
 .cover__description {
-margin-top: 106px;
+margin-top: auto;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -187,7 +189,7 @@ margin: 180px auto 0;
 }
 
 .lots__heading {
-margin: 0 0 27px 40px;
+margin: 0 0 27px 26px;
 padding-top: 0;
 
 font-weight: 700;
@@ -220,7 +222,8 @@ color: inherit;
 
 .card {
 position: relative;
-min-height: 596px;
+height: 596px; 
+min-height: 0;
 padding: 48px 40px 48px;
 display: flex;
 flex-direction: column;
@@ -273,7 +276,7 @@ line-height: 1.2;
 .lots__look-more-link {
 display: inline-block;
 margin-top: 30px;
-margin-left: 40px;
+margin-left: 26px;
 text-decoration: underline;
 font-size: 20px;
 line-height: 23px;
@@ -304,7 +307,7 @@ width: 148px;
 height: auto;
 }
 
-.about__logo-column { 
+.about__logo-column {
 padding: 0;
 display: flex;
 justify-content: center;
@@ -323,7 +326,7 @@ text-transform: uppercase;
 margin-top: 150px;
 display: flex;
 flex-direction: column;
-gap: 24px;
+gap: 30px;
 }
 
 .about__text-column {
@@ -338,15 +341,12 @@ line-height: 24px;
 }
 
 .footer {
-display: grid;
-grid-template-columns: 240px 1fr 240px;
-align-items: start;
-
-padding: 0;
-margin-top: 180px;       
-min-height: 180px;
-padding-left: 50px;
-padding-right: 50px;
+    display: grid;
+  grid-template-columns: 240px 1fr 240px;
+  align-items: start;
+  margin-top: 180px;
+  min-height: 180px;
+  padding: 0;
 }
 
 .footer__address {
